@@ -13,9 +13,9 @@ ETA May 2019. Needs more manpower.
 - [ ] Mosaic
 - [ ] Mask
 - [ ] Music/Video
-- [ ] CSS // I really don't want to do this and I hope someone else can take it
-- [ ] Fast responder // need a PoC. May need a backend server and WebSocket
-- [ ] Live score board // same as above
+- [ ] CSS `// I really don't want to do this and I hope someone else can take it`
+- [ ] Fast responder `// need a PoC. May need a backend server and WebSocket`
+- [ ] Live score board `// same as above`
 
 ## Project setup
 ```

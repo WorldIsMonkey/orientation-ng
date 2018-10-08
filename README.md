@@ -1,5 +1,5 @@
 # orientation-ng
-Next generation orientation engine
+Next generation orientation engine powered by `Vue.js`
 
 ETA May 2019. Needs more manpower.
 ## Project setup

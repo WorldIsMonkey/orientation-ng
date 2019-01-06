@@ -17,6 +17,19 @@ ETA May 2019. Needs more manpower.
 - [ ] Fast responder `// need a PoC. May need a backend server and WebSocket`
 - [ ] Live score board `// same as above`
 
+## API
+A demo content delivery server has been set up at [149.248.60.115](http://149.248.60.115).
+To retrieve the JSON output of each question type, you can `GET` the following endpoints:
+```
+/jsonapi/node/multiple_choice
+/jsonapi/node/short_answer
+/jsonapi/node/true_or_false
+/jsonapi/node/mosaic
+/jsonapi/node/mask
+/jsonapi/node/music
+```
+Note that for fields with uploaded files (e.g. images, audio, video), a second API call to the URL in `links.related` is needed to get the actual URL of the file.
+
 ## Project setup
 ```
 npm install

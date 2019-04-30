@@ -13,6 +13,18 @@
 
 <script>
 export default {
-  name: 'multipleChoice'
+  name: 'multipleChoice',
+
+  data(){
+    return {
+      questions: {}
+   }
+  },
+
+  methods: {
+    // click to choose
+    
+  }
 }
+
 </script>

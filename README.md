@@ -1,9 +1,9 @@
 # orientation-ng
 Next generation orientation engine running in browsers.
 
-The goal of this project is to port the long-existing (a.k.a. crappy) [Flash-based orientation engine](https://github.com/WorldIsMonkey/wim-ori-con) to browsers in order to achieve maximum portability, maintainability and expandability using latest web technologies.
+The goal of this project is to port the long-existing (a.k.a. crappy) [Flash-based orientation engine](https://github.com/WorldIsMonkey/orientation-lts) to browsers in order to achieve maximum portability, maintainability and expandability using latest web technologies.
 
-ETA May 2019. Needs more manpower.
+ETA: Soon™. Needs more manpower.
 
 ## TODO
 - [ ] Structure
@@ -28,7 +28,7 @@ To retrieve the JSON output of each question type, you can `GET` the following e
 /jsonapi/node/mask
 /jsonapi/node/music
 ```
-Note that for fields with uploaded files (e.g. images, audio, video), a second API call to the URL in `links.related` is needed to get the actual URL of the file.
+Note that for fields with uploaded files (e.g. image, audio, video), a second API call to the URL in `links.related` is needed to get the actual URL of the file.
 
 ## Project setup
 ```

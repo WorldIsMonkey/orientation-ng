@@ -3,7 +3,7 @@ Next generation orientation engine running in browsers.
 
 The goal of this project is to port the long-existing (a.k.a. crappy) [Flash-based orientation engine](https://github.com/WorldIsMonkey/orientation-lts) to browsers in order to achieve maximum portability, maintainability and expandability using latest web technologies.
 
-This project has been iceboxed as nobody is working on it.
+This project is restarted, Shouyu and Joe will work on it, maybe there will be another person.
 
 ## TODO
 - [ ] Structure
@@ -19,6 +19,8 @@ This project has been iceboxed as nobody is working on it.
 
 ## API
 A content delivery API is included in the [orientation-drupal](https://github.com/WorldIsMonkey/orientation-drupal) project.
+
+we might construct a new version of these in the future.
 
 To retrieve the JSON output of each question type, you can `GET` the following endpoints:
 ```

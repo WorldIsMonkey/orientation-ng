@@ -1,18 +1,40 @@
 <template>
   <div class="home">
     <!-- able to change the background -->
-    this is the home of this project
-
     <!-- different question type goes here -->
-    <div class="info">
-      this is the navigation page 
-      <router-link to="/multipleChoice"> 选择题 </router-link>
-      <router-link to="/mask"> 挡脸题 </router-link>
-      <router-link to="/mosaic"> 马赛克题 </router-link>
-      <router-link to="/music"> 音乐题 </router-link>
-      <router-link to="/shortAnswer"> 简答题 </router-link>
-      <router-link to="/trueFalse"> 判断题 </router-link>
-    </div>
+
+      <div class="columns">
+
+        <div class="column is-1">
+          <router-link to="/multipleChoice">
+            <a class="button"> 选择题 </a>
+          </router-link>
+
+          <router-link to="/mask">
+            <a class="button"> 挡脸题 </a>
+          </router-link>
+
+          <router-link to="/mosaic">
+            <a class="button"> 马赛克题 </a>
+          </router-link>
+        </div>
+        
+        <div class="column is-1">
+          <router-link to="/music">
+            <a class="button"> 音乐题 </a>
+          </router-link>
+
+          <router-link to="/shortAnswer">
+            <a class="button"> 简答题 </a>
+          </router-link>
+
+          <router-link to="/trueFalse">
+            <a class="button"> 判断题 </a>
+          </router-link>
+        </div>
+
+      </div>
+
   </div>
 </template>
 

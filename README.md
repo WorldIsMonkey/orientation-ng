@@ -52,3 +52,15 @@ npm run build
 ```
 npm run lint
 ```
+
+### remember enter the frontend or the backend to set up the project
+
+### Backend start
+```
+node app.js
+```
+
+### or using nodemon for better experience
+```
+nodemon app.js
+```

@@ -2,11 +2,11 @@
   <div>
     <h3>不搞有的没的，该登录了</h3>
     <div id="usernameDiv">
-        <p>username:</p> <input id="username" class="input" type="text" placeholder="Text input">
+        <p>username:</p> <input v-model="username" class="input" type="text" placeholder="Text input">
     </div>
 
     <div id="passwordDiv">
-        <p>password:</p> <input id="password" class="input" type="text" placeholder="Text input">
+        <p>password:</p> <input v-model="password" class="input" type="text" placeholder="Text input">
     </div>
 
     <div id="confirm">
@@ -24,13 +24,13 @@ export default {
  methods: {
     login(){
         console.log("tries to log in");
-        var username = document.getElementById(username);
-        var password = document.getElementById(password);
+        var username = this.username;
+        var password = this.password;
         // send to backend
         console.log(username);
         console.log(password);
-
-    }
+        
+    },
  }
 }
 </script>

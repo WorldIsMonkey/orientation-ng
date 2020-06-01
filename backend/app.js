@@ -1,7 +1,10 @@
 /*jshint esversion: 6 */
 
 // set up part, add packages to this part
-// placeholder for backend
+// things for security
+const crypto = require('crypto');
+// file system
+const fs = require('fs');
 // using node.js express framework 
 const express = require('express');
 // websocket
@@ -26,6 +29,7 @@ const mongo = require('mongodb');
 var MongoClient = require('mongodb').MongoClient;
 var dburl = "mongodb://localhost:27017/"; 
 
+// login and authentication
 // enable cookie
 const cookie = require('cookie');
 
@@ -36,9 +40,6 @@ app.use(session({
     saveUninitialized: true,
     cookie: {HttpOnly: true, sameSite: true, Secure: true}
 }));
-
-
-
 // check cookie?
 app.use(function(req, res, next){
     var username = (req.session.username)? req.session.username : '';
@@ -48,17 +49,14 @@ app.use(function(req, res, next){
     }));
     next();
 });
-
 app.use(function (req, res, next){
     console.log("HTTP request", req.method, req.url, req.body);
     next();
 });
-
 var isAuthenticated = function(req, res, next) {
     if (!req.session.username) return res.status(401).end("access denied");
     next();
 };
-
 // sign in
 app.post('/signin/', function (req, res, next) {
     const errors = validationResult(req);
@@ -90,7 +88,6 @@ app.post('/signin/', function (req, res, next) {
         });
       });
 });
-
 // sign out
 app.get('/signout/', function (req, res, next) {
     req.session.destroy();
@@ -100,7 +97,6 @@ app.get('/signout/', function (req, res, next) {
     }));
     res.redirect('/');
 });
-
 // sign up, probably not using it
 app.post('/signup/', function (req, res, next) {
     const errors = validationResult(req);
@@ -127,6 +123,17 @@ app.post('/signup/', function (req, res, next) {
             })
         })
     });
+});
+
+// insert questions
+// multiple choice
+app.post('/api/insert/multipleChoice', function(req, res, next){
+
+});
+
+// get questions
+app.get('/api/get/multipleChoice', function(req,res,next){
+
 });
 
 

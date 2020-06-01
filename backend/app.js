@@ -6,6 +6,7 @@
 const express = require('express');
 // websocket
 const expressWs = require('express-ws');
+const { check, validationResult } = require('express-validator');
 // set up
 const app = new express();
 expressWs(app);
@@ -16,7 +17,7 @@ const port = 3000;
 // parser
 const bodyParser = require('body-parser');
 app.use(express.static('static'));
-app.use(morgan('dev'));
+// app.use(morgan('dev'));
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 
@@ -72,7 +73,7 @@ app.post('/signin/', function (req, res, next) {
         if (err) throw err;
         var dbo = db.db("wim");
         // find obj by username
-        dbo.collection("users").findOne({user: username}, function(err, result) {
+        dbo.collection("users").findOne({username: username}, function(err, result) {
           if (err) throw err;
           if (!result) return res.status(401).end("access denied");
           console.log(result);

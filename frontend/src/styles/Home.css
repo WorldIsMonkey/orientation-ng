@@ -1,0 +1,15 @@
+.columns {
+    display: flex;
+    padding: 3em;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.column {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    margin: 0 auto;
+}

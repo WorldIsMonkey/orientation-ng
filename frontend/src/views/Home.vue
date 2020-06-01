@@ -38,6 +38,10 @@
   </div>
 </template>
 
+<style lang="css" scoped>
+@import "../styles/Home.css";
+</style>
+
 <script>
 export default {
   name: 'home',

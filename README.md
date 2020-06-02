@@ -6,7 +6,7 @@ The goal of this project is to port the long-existing (a.k.a. crappy) [Flash-bas
 This project is restarted, Shouyu and Joe will work on it, maybe there will be another person.
 
 ## TODO
-- [ ] Structure
+- [√] Structure
 - [ ] Multiple choice
 - [ ] True or False
 - [ ] Short Answer

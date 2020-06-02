@@ -128,7 +128,21 @@ app.post('/signup/', function (req, res, next) {
 // insert questions
 // multiple choice
 app.post('/api/insert/multipleChoice', function(req, res, next){
+    var question = req.body;
 
+    MongoClient.connect(dburl, function(err, db) {
+        if (err) throw err;
+        var dbo = db.db("wim");
+
+        dbo.collection("multipleChoice").insertOne(question, function(err, res) {
+            if (err) throw err;
+            console.log("question inserted");
+            db.close();
+
+      });
+    });
+
+    return res.json("question " + question.field_question + "added");
 });
 
 // get questions

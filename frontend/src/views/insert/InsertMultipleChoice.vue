@@ -79,27 +79,20 @@ export default {
                       field_D: this.optionD,
           }
           // send to backend
-            fetch('//localhost:3000/api/insert/multipleChoice', {
-                method: 'POST',
-                credentials: 'include',
-                body: JSON.stringify(question)
-            })
-            .then(res => res.json())
-            .then((response) => {
-                if (response.success) {
-                    console.log(response);
-                } else {
-                    console.error(response);
-                }
-            }).catch((error) => {
-                console.error(error);
-            })
+           this.axios.post('//localhost:3000/api/insert/multipleChoice', question)
+            .then(res => {
+            //res.data do something right
+            console.log(res.data);
+            }).catch(res => {
+            //do something wrong
+            console.error(res.data);
+          })
+
         }
 
       }
 
     },
-
 
 }
 </script>

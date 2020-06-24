@@ -26,7 +26,10 @@
 <script>
 export default {
   name: 'multipleChoice',
-
+  mounted:function(){
+    this.getAllQuestion()
+  }
+  ,
   data(){
     return {
       // questions and answers?
@@ -42,8 +45,8 @@ export default {
         }
       ]
    }
-  },
-
+  }
+  ,
   methods: {
     // click to choose
     showCorrectAnswer(){
@@ -76,7 +79,22 @@ export default {
       // replace the current question
 
       // reset the color
+
+      questions.shift();
     },
+
+    getAllQuestion(){
+      console.log("test");
+      fetch("http://localhost:3000/api/get/multipleChoice")
+      .then(res => {
+            //res.data do something right
+            console.log("test2");
+            console.log(res.data);
+            }).catch(res => {
+            //do something wrong
+            console.error(res.data);
+      })
+    }
 
     // if use the drupel, we need decode first
     // zhuanma(){}

@@ -146,8 +146,21 @@ app.post('/api/insert/multipleChoice', function(req, res, next){
 });
 
 // get questions
-app.get('/api/get/multipleChoice', function(req,res,next){
-
+app.get('/api/get/multipleChoice', (req,res) => {
+    var quesArray = [];
+    MongoClient.connect(dburl, function(err, db) {
+        if (err) throw err;
+        var dbo = db.db("wim");
+        var cursor = dbo.collection("multipleChoice").find();
+        cursor.forEach(function(question, err) {
+            if (err) throw err;
+            quesArray.push(question);
+        }, function() {
+            db.close();
+            console.log("db closed");
+            res.send(quesArray);
+        })
+    });
 });
 
 
